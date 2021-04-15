@@ -12,7 +12,7 @@ instance.interceptors.response.use(
         return response;
     },
     (error) => {
-        NotificationManager.error(error);
+        console.log(error)
     }
 );
 
