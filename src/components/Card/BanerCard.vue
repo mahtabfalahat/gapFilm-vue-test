@@ -5,8 +5,8 @@
       overlay
       v-bind:img-src="LandscapeImage"
       img-alt="Card Image"
-      text-variant="white"
-      v-bind:title="Title"
+      text-variant=""
+      v-bind:title="Title"  
     >
     </b-card>
   </div>
