@@ -1,1 +1,0 @@
-export const API_CALL_TIME_OUT = 60000; 

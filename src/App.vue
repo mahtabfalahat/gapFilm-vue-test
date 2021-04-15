@@ -74,14 +74,14 @@ export default {
   },
   async mounted() {
     try {
-      /*axios.get("http://apitest.tek-nic.com/movie/FirstPage").then((response) => {
-      this.info = response.data.result[2].list;
-    });*/
-
       const response = await moviesInfo();
       this.info = response.data.result[2].list;
       this.banerInfo = response.data.result[0].list;
       this.middleCardsInfo = response.data.result[1].list;
+      //or we can write api like thie: 
+       /*axios.get("http://apitest.tek-nic.com/movie/FirstPage").then((response) => {
+      this.info = response.data.result[2].list;
+    });*/
     } catch {
       console.log("error");
     }

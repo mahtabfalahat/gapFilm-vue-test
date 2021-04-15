@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { BASE_URL } from '../constants/common';
-import { API_CALL_TIME_OUT } from '../constants/magicKey';
+import { API_CALL_TIME_OUT } from '../constants/common';
 
 const instance = axios.create({
     baseURL: BASE_URL,
