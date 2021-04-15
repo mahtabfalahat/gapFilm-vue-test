@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <SearchBar />
-    <MenuBar />
+    <div id="header">
+      <SearchBar />
+      <MenuBar />
+    </div>
+
     <div id="bodyContainer">
       <div id="sideMenu">
         <SidebarMenu />
@@ -9,6 +12,7 @@
       <div id="bodyItems">
         <div id="axContainer" v-for="value in banerInfo" :key="value.id">
           <BannerCard
+            
             v-bind:Title="value.Title"
             v-bind:LandscapeImage="value.LandscapeImage"
           />
@@ -47,7 +51,7 @@ import SearchBar from "./components/Header/SearchBar";
 import CardVideo from "./components/Card/CardVideo";
 import SidebarMenu from "./components/Body/SideBarMenu";
 import BannerCard from "./components/Card/BanerCard";
-import MiddleCard from './components/Card/MiddleCard';
+import MiddleCard from "./components/Card/MiddleCard";
 //import axios from "axios";
 import { moviesInfo } from "./api/endpoints";
 export default {
@@ -58,14 +62,14 @@ export default {
     CardVideo,
     SidebarMenu,
     BannerCard,
-    MiddleCard
+    MiddleCard,
   },
 
   data() {
     return {
       info: [],
       banerInfo: [],
-      middleCardsInfo : []
+      middleCardsInfo: [],
     };
   },
   async mounted() {
@@ -77,8 +81,7 @@ export default {
       const response = await moviesInfo();
       this.info = response.data.result[2].list;
       this.banerInfo = response.data.result[0].list;
-      this.middleCardsInfo = response.data.result[1].list
-
+      this.middleCardsInfo = response.data.result[1].list;
     } catch {
       console.log("error");
     }
@@ -93,14 +96,19 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  width: 100vw;
-  height: 100%;
+  height:100%;
+  width:100%;
+  overflow:hidden; 
   padding: 0px;
   margin: 0px;
   background-color: #333333;
 }
-
+#header{
+  width: 100%;
+  margin: auto;
+}
 #bodyContainer {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 20px auto;

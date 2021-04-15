@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 #navContainer {
-  width: 100vw;
+  
   display: flex;
   justify-content: space-between;
   background-color: #333333;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="container">
     <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand href="#">CELEBRITIES</b-navbar-brand>
       <p id="fanText" >FANZONE</p>
@@ -26,6 +26,7 @@ export default {
 };
 </script>
 <style scoped>
+
 .active-class{
   color: aquamarine;
 }
